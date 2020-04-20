@@ -1,0 +1,19 @@
+<div class="flex-wrap">
+    <div>
+        <h2>Overview</h2>
+    </div>
+    <div>
+        <button mat-raised-button [matMenuTriggerFor]="menuAddItem" color="primary">
+            <mat-icon>add</mat-icon>
+            Add item
+        </button>
+        <mat-menu #menuAddItem="matMenu">
+            <button mat-menu-item>
+                <mat-icon>exit_to_app</mat-icon>
+                Sign out
+            </button>
+        </mat-menu>
+    </div>
+</div>
+
+<mat-divider></mat-divider>
