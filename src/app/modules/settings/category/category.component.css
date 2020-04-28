@@ -1,0 +1,9 @@
+.flex-wrap-space-between {
+    margin-bottom: 20px;
+}
+
+table,
+.mat-paginator  {
+    width: 50%;
+    margin: auto;
+}

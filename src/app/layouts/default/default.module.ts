@@ -15,13 +15,23 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatTableModule } from '@angular/material/table';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { CategoryComponent } from 'src/app/modules/settings/category/category.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MatDialogModule } from '@angular/material/dialog';
+import { CategoryComponentDialog } from 'src/app/modules/settings/category/dialog/category.component.dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DialogModule } from 'src/app/dialog/dialog.module';
 
 @NgModule({
   declarations: [
     DefaultComponent,
     DashboardComponent,
     PostsComponent,
-    SettingsComponent
+    SettingsComponent,
+    CategoryComponent,
+    CategoryComponentDialog
   ],
   imports: [
     CommonModule,
@@ -35,7 +45,13 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatTabsModule,
     MatTableModule,
     MatCheckboxModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    HttpClientModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    DialogModule
   ]
 })
 export class DefaultModule { }

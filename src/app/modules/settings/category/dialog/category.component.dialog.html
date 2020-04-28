@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>New category</h1>
+<div mat-dialog-content>
+    <form [formGroup]="categoryForm" class="example-form">
+        <mat-form-field class="example-full-width">
+            <mat-label>Name category</mat-label>
+            <input matInput formControlName="name" placeholder="Name category">
+            <mat-error
+                *ngIf="categoryForm.controls['name'].invalid && (categoryForm.controls['name'].dirty || categoryForm.controls['name'].touched)">
+                Please enter a category name
+            </mat-error>
+        </mat-form-field>
+        <div mat-dialog-actions class="flex-wrap-space-between">
+            <button mat-raised-button class="back-button" (click)="onNoClick()" >Back</button>
+            <button mat-raised-button [disabled]="categoryForm.value.name ? false : (categoryForm.pristine || categoryForm.invalid)" type="submit" class="add-button">Save</button>
+        </div>
+    </form>
+</div>

@@ -2,3 +2,68 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Button style */
+
+.delete-button {
+    background-color: #C70000;
+    color: #ffffff;
+}
+
+.delete-button:hover {
+    background-color: #E92222;
+}
+
+.add-button {
+    background-color: #008000;
+    color: #ffffff;
+}
+
+.add-button:hover {
+    background-color: #22A222;
+}
+
+.back-button {
+    background-color: #8c92ac;
+    color: #ffffff;
+}
+
+.back-button:hover {
+    background-color: #AEB4CE;
+}
+
+/* End button style */
+/* ------------------ */
+/* Icon style */
+
+.icon-edit {
+    color:#22A222;
+    font-size: 20px;
+    cursor: pointer;
+}
+.icon-delete {
+    color:#E92222;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* End icon style */
+/* ------------------ */
+/* Table style */
+
+table {
+    width: 100%;
+}
+
+.table-select,
+.table-action {
+    width: 60px;
+}
+
+/* End table style */
+/* ------------------ */
+.flex-wrap-space-between {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
