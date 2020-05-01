@@ -25,11 +25,15 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.lockButtonToOpenDialog();
+
+  }
+
+  lockButtonToOpenDialog(){
     const lockButton = document.querySelector(this.idLockButton);
     fromEvent(lockButton, this.actionFromEvent).subscribe(
       () => this.openLockDialog()
     );
-
   }
 
   toggleSiderBar() {

@@ -17,4 +17,16 @@ export class CategoryService {
   getAllCategory(): Observable<CategoryModel[]> {
     return this.http.get<CategoryModel[]>(this.categoryUrl);
   }
+
+  createCategory(categoryItem: CategoryModel): Observable<CategoryModel> {
+    return this.http.post<CategoryModel>(this.categoryUrl, categoryItem);
+  }
+
+  editCategory(id: number, editCategoryItem: CategoryModel) {
+    return this.http.put(`${this.categoryUrl}/${id}`, editCategoryItem);
+  }
+
+  deleteCategory(id: number) {
+    return this.http.delete(`${this.categoryUrl}/${id}`);
+  }
 }

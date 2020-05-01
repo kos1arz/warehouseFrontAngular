@@ -55,11 +55,10 @@
     transition: background 0.5s ease-in-out
 }
 
-/* .password-dot li:first-child {
-    margin-left: 0;
+.fill {
+    background-color: #3f51b5;
 }
 
-.password-dotpass li:after {
-   color: white;
-   //content: "○";
-} */
+.fill-error {
+    background-color: #c4302b;
+}

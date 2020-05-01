@@ -78,4 +78,11 @@ export class CategoryComponent implements OnInit {
       // this.animal = result;
     });
   }
+
+  deleteElement(id: number) {
+    if(id) {
+      this.categoryService.deleteCategory(id).subscribe();
+      this.getAllCategory();
+    }
+  }
 }

@@ -36,7 +36,7 @@
         <th mat-header-cell *matHeaderCellDef> Action </th>
         <td mat-cell *matCellDef="let element" class="table-action">
             <mat-icon class="icon-edit" (click)="openDialogAdd(element)">edit</mat-icon>
-            <mat-icon class="icon-delete">delete</mat-icon>
+            <mat-icon class="icon-delete" (click)="deleteElement(element.id)">delete</mat-icon>
         </td>
     </ng-container>
 

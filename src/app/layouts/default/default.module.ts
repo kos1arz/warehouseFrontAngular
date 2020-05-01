@@ -23,6 +23,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DialogModule } from 'src/app/dialog/dialog.module';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { DialogModule } from 'src/app/dialog/dialog.module';
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
-    DialogModule
+    DialogModule,
+    MatProgressBarModule
   ]
 })
 export class DefaultModule { }

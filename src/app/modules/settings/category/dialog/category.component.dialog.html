@@ -11,7 +11,10 @@
         </mat-form-field>
         <div mat-dialog-actions class="flex-wrap-space-between">
             <button mat-raised-button class="back-button" (click)="onNoClick()" >Back</button>
-            <button mat-raised-button [disabled]="categoryForm.value.name ? false : (categoryForm.pristine || categoryForm.invalid)" type="submit" class="add-button">Save</button>
+            <button mat-raised-button [disabled]="categoryForm.value.name ? false : (categoryForm.pristine || categoryForm.invalid)" type="submit" class="add-button" (click)="saveClick()">Save</button>
         </div>
     </form>
+</div>
+<div *ngIf="isLoading">
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 </div>
