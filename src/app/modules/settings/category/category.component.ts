@@ -6,10 +6,12 @@ import { CategoryService } from './services/category.service';
 import { CategoryModel } from './model/category.model';
 import { MatDialog } from '@angular/material/dialog';
 import { CategoryComponentDialog } from './dialog/category.component.dialog';
+import { DeleteComponentDialog } from 'src/app/dialog/components/delete/delete.component.dialog';
 
 /**
  * @title Table with selection
  */
+
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',
@@ -75,14 +77,34 @@ export class CategoryComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       this.getAllCategory();
-      // this.animal = result;
+    });
+  }
+
+  openDialogDelete(deleteId, nameTable: string): void {
+    const dialogRef = this.dialog.open(DeleteComponentDialog, {
+      width: '350px',
+      data: {
+        id: deleteId ? deleteId : null,
+        table: nameTable ? nameTable : null,
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      this.getAllCategory();
+      this.selection.clear();
     });
   }
 
   deleteElement(id: number) {
     if(id) {
-      this.categoryService.deleteCategory(id).subscribe();
-      this.getAllCategory();
+      const category: string = 'Category';
+      this.openDialogDelete(id, category);
     }
+  }
+
+  deleteElements() {
+    const category: string = 'Category';
+    const selectedId = this.selection.selected.map( ({id}) => id );
+    (selectedId.length > 0) ? this.openDialogDelete(selectedId, category) : null;
   }
 }
